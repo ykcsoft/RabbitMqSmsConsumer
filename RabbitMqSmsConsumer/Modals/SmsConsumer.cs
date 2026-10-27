@@ -17,15 +17,13 @@ namespace MailConsumerRabbitMQ.Modals
 
         public async Task InitializeAsync(string hostName)
         {
-            Console.WriteLine(hostName+" / env_ = HOST_NAME");
             _factory = new ConnectionFactory
             {
                 Port = 5672,
-                HostName = hostName,
-                //HostName = "192.168.1.76",
-                UserName = "user",
-                Password = "1234567",
-            
+                HostName = "rabbitmq",
+                UserName = "recruiter",
+                Password = "ykcsft1155+++",
+
             };
 
             // RabbitMQ bağlantısı oluştur (senkron API kullanıldığı için doğrudan çağırılıyor)
